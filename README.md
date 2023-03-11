@@ -12,7 +12,17 @@ Below are descriptions of the stories I worked on, along with code snippets and 
 * [CastMember Model](#castmember-model)
 * [CastDirector Model](#castdirector-model)
 
-### Limit Words Method
+### [Limit Words Method](https://github.com/samasargent/JobPlacementDashboard/blob/main/LimitWords.cs)
+
+My task was to create a method that could be used to limit the number of words that are displayed using ellipses. For example, "Lorem Ipsum Lorem Ipsum Lorem Ipsum" would turn into "Lorem Ipsum Lorem...". The method took in a string and an integer—the string was the content and the integer was how many words were allowed before cutting off the string and adding ellipses ( . . . ).
+
+I worked it out into two parts. The first was determining how many words there were, ignoring any leading or trailing white spaces. The second part split up the string into words and limited the number of them to the integer specified.
+
+As an example, I was able to use the method to limit the words that loaded from a cast member's biography.
+```c#
+@TextHelpers.LimitWords((@Model.Bio.ToString()), 10)
+```
+![myImage](https://github.com/samasargent/JobPlacementDashboard/blob/main/limitwordsexample.png)
 
 ### CastMember Model
 
