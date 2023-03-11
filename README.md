@@ -63,6 +63,59 @@ public static string ImageSource(byte[] photo)
 
 ### CastDirector Model
 
+The next model I created was CastDirector, which was a user who was an admin in the Production area for the CastMember model. It extended from ApplicationUser.
+To test out the class, I created a seed method for CastDirector, which included setting up a role called Cast Director.
+
+```c#
+public static void SeedCastDirector(ApplicationDbContext context)
+    {
+        var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+        var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+        if (!roleManager.RoleExists("CastDirector"))
+        {
+            var role = new IdentityRole();
+            role.Name = "CastDirector";
+            roleManager.Create(role);
+        }
+
+        var director = new CastDirector
+        {
+            UserName = "namename",
+            Email = "namename@gmail.com",
+            EmailConfirmed = true,
+            PhoneNumber = "555-555-5555",
+            PhoneNumberConfirmed = true,
+            TwoFactorEnabled = false,
+            LockoutEnabled = false,
+            AccessFailedCount = 0,
+            HiredCastMembers = 20,
+            FiredCastMembers = 5
+        };
+
+        var chkUser = UserManager.Create(director);
+
+        if (chkUser.Succeeded)
+        {
+            var result = UserManager.AddToRole(director.Id, "CastDirector");
+        }
+    }
+```
+
+By setting up the role CastDirector, I was then able to restrict access to the Create, Edit and Delete pages so only a user assigned that role could make changes to those. If a general user tried to access these pages, they would be redirected to the Access Denied page.
+
+```c#
+public class CastDirectorAuthorize : AuthorizeAttribute
+{
+    // Called when access is denied
+    protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
+    {
+        filterContext.Result = new RedirectToRouteResult(
+        new RouteValueDictionary(new { controller = "CastMembers", action = "AccessDenied" }));
+    }
+}
+```
+
 _Jump to: [Front End Stories](#front-end-stories), [Back End Stories](#back-end-stories), [Other Skills](#other-skills-learned), [Page Top](#live-project)_
 
 ## Front End Stories
