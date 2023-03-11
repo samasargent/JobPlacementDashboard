@@ -140,6 +140,46 @@ Later on, I also needed to add the image upload section, as well as the preview 
  
 ### Index Page
 
+For the styling and layout of the Index page, I needed to set the page up so each cast member loaded as a card and was sorted under the production they were acting in. Next, each card should have an overlay with edit and delete links appearing over the image on hover.
+
+```html
+@foreach (var prod in productions)
+{
+<div>
+    <h3 class="mt-5">
+        @Html.DisplayFor(modelItem => prod.Key)
+    </h3>
+    <hr class="bg-light" />
+    <div class="row card-columns">
+        @foreach (var member in Model.Where(m => m.ProductionTitle == prod.Key))
+        {
+            <div class="col-sml-4 p-1">
+                <div class="card m-2 castMember-Index--card">
+                    <div class="castMember-Index--overlaycontainer">
+                        <div class="castMember-Index--overlaybuttons text-center mt-5">
+                            <i class="fas fa-pencil fa-2x castMember-Index--btn" onclick="location.href='@Url.Action("Edit", "CastMembers", new { id = member.CastMemberID })'"></i>
+                            <i class="fas fa-trash-alt fa-2x castMember-Index--btn" onclick="location.href='@Url.Action("Delete", "CastMembers", new { id = member.CastMemberID })'"></i>
+                        </div>
+
+                        <a href="@Url.Action("Details", "CastMembers", new { id = member.CastMemberID })">
+                            <img src="@CastMembersController.ImageSource(member.Photo)" class="card-img-top castMember-Index--image" alt="@member.CastMemberID">
+                        </a>
+
+                        <div class="card-body bg-dark">
+                            <h5 class="card-title text-center font-weight-bold">@member.Name </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+}
+```
+Later on, I added a search feature to the top of the page so that you could find a cast member, either by searching a name or part of a name or something in their biography.
+
+![Index Page GIF](https://github.com/samasargent/JobPlacementDashboard/blob/main/indexpage.gif)
+
 ### Details and Delete Pages
 
 ### Access Denied Page
