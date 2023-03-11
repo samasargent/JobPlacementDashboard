@@ -134,7 +134,15 @@ For the styling of the Credit and Edit pages, I initially had the following requ
 * Change the border color of the input fields when clicked.
 * Place the form in a centered container.
 
-Later on, I also needed to add the image upload section, as well as the preview of that image.
+Later on, I also needed to add the image upload section, as well as the preview of that image. To have the image preview appear on the page, I used Javascript.
+
+```js
+<script>
+    function preview() {
+        frame.src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>
+```
 
 ![Create Page GIF](https://github.com/samasargent/JobPlacementDashboard/blob/main/createpage.gif)
  
