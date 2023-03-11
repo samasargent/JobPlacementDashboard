@@ -22,7 +22,7 @@ As an example, I was able to use the method to limit the words that loaded from 
 ```c#
 @TextHelpers.LimitWords((@Model.Bio.ToString()), 10)
 ```
-![myImage](https://github.com/samasargent/JobPlacementDashboard/blob/main/limitwordsexample.png)
+![LimitWords](https://github.com/samasargent/JobPlacementDashboard/blob/main/limitwordsexample.png)
 
 ### [CastMember Model](https://github.com/samasargent/JobPlacementDashboard/blob/main/CastMember.cs)
 
@@ -127,6 +127,17 @@ _Jump to: [Front End Stories](#front-end-stories), [Back End Stories](#back-end-
 
 ### Create and Edit Pages
 
+For the styling of the Credit and Edit pages, I initially had the following requirements:
+
+* Style the Submit and Back to List buttons. There needed to be a color distinction between these two buttons and they both be needed to be centered on the page.
+* Add placeholders to all input fields. 
+* Change the border color of the input fields when clicked.
+* Place the form in a centered container.
+
+Later on, I also needed to add the image upload section, as well as the preview of that image.
+
+![Create Page GIF](https://github.com/samasargent/JobPlacementDashboard/blob/main/createpage.gif)
+ 
 ### Index Page
 
 ### Details and Delete Pages
