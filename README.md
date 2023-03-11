@@ -116,7 +116,7 @@ public class CastDirectorAuthorize : AuthorizeAttribute
 }
 ```
 
-_Jump to: [Front End Stories](#front-end-stories), [Back End Stories](#back-end-stories), [Other Skills](#other-skills-learned), [Page Top](#live-project)_
+_Jump to: [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Other Skills](#other-skills-learned), [Page Top](#live-project)_
 
 ## Front End Stories
 
@@ -184,7 +184,7 @@ Later on, I added a search feature to the top of the page so that you could find
 
 ### Access Denied Page
 
-_Jump to: [Front End Stories](#front-end-stories), [Back End Stories](#back-end-stories), [Other Skills](#other-skills-learned), [Page Top](#live-project)_
+_Jump to: [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Other Skills](#other-skills-learned), [Page Top](#live-project)_
 
 ## Other Skills Learned
 
@@ -192,6 +192,6 @@ _Jump to: [Front End Stories](#front-end-stories), [Back End Stories](#back-end-
 * _How to research a new subject to solve a problem._ Many times on this project, I ran into problems I needed to solve that I had little to no familiarity with. I quickly learned how to find the kind of answers I needed through persisting in research until I understood the subject enough to come up with a solution for the story.
 * _How utilize version control to better work as part of a team._ I became more familiar with using branches and making changes to code alongside other people. I learned how important it is to stay in communication with the people you're working with. Also I learned from experience how valuable making frequent commits and checking in code can prevent a lot of problems that would be caused by waiting to save or test code until you have a big chunk of it.
 
-_Jump to: [Front End Stories](#front-end-stories), [Back End Stories](#back-end-stories), [Other Skills](#other-skills-learned), [Page Top](#live-project)_
+_Jump to: [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Other Skills](#other-skills-learned), [Page Top](#live-project)_
 
 
