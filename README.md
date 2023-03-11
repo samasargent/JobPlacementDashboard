@@ -182,7 +182,15 @@ Later on, I added a search feature to the top of the page so that you could find
 
 ### Details and Delete Pages
 
+For the styling of the Details and Delete pages, the requirements were that the cast member's name, photo and biography should be more prominent than the other properties and that the buttons should be styled with icons.
+
+![Details Page](https://github.com/samasargent/JobPlacementDashboard/blob/main/detailspage.png)
+
 ### Access Denied Page
+
+I created a page for users that weren't authorized to edit cast members to be routed to. The requirements were to have the "not authorized" message at the top of the page along with a suitable image.
+
+![Access Denied Page](https://github.com/samasargent/JobPlacementDashboard/blob/main/accessdeniedpage.png)
 
 _Jump to: [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Other Skills](#other-skills-learned), [Page Top](#live-project)_
 
