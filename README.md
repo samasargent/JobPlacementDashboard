@@ -2,7 +2,7 @@
 
 ## Introduction
 
-I worked as part of a small team to create an interactive website for a theatre company local to Portland. The purpose of the website was to manage content and productions for the company. The project waas built using ASP .NET MVC and Entity Framework. I mainly worked on the Cast Member section of the website, where data on the different members of the company would be stored. We worked in a two week sprint to get the basic structure of the website set up and designed. I worked on several [back end stories](#back-end-stories)—mostly setting up two of the main models for the website. I also worked on the [front end](#front-end-stories) of the website, utilizing Bootstrap and JavaScript to design the CRUD pages for the CastMember class. I learned good version control and [other skills](#other-skills-learned) from working on this team over the two weeks.
+I worked as part of a small team to create an interactive website for a theatre company local to Portland. The purpose of the website was to manage content and productions for the company. The project was built using ASP .NET MVC and Entity Framework. I mainly worked on the Cast Member section of the website, where data on the different members of the company would be stored. We worked in a two week sprint to get the basic structure of the website set up and designed. I worked on several [back end stories](#back-end-stories)—mostly setting up two of the main models for the website. I also worked on the [front end](#front-end-stories) of the website, utilizing Bootstrap and JavaScript to design the CRUD pages for the CastMember class. I learned good version control and [other skills](#other-skills-learned) from working on this team over the two weeks.
 
 Below are descriptions of the stories I worked on, along with code snippets and navigation links. I also have some full code files in this repo for the larger functionalities I implemented.
 
@@ -134,7 +134,7 @@ For the styling of the Credit and Edit pages, I initially had the following requ
 * Change the border color of the input fields when clicked.
 * Place the form in a centered container.
 
-Later on, I also needed to add the image upload section, as well as the preview of that image. To have the image preview appear on the page, I used Javascript.
+Later on, I also needed to add the image upload section, as well as the preview of that image. To have the image preview appear on the page, I used JavaScript.
 
 ```js
 <script>
